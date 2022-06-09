@@ -1,6 +1,8 @@
 const dbConnection = require("./../database/dbConnection");
 const validator = require('fastest-validator');
 exports.updateBlog = async(req,res)=>{
+    const user = req.user;
+    
     const id = req.params.id;
     const Blog = req.body;
     const Blogs = {
@@ -9,8 +11,8 @@ exports.updateBlog = async(req,res)=>{
       
    }
    const schema = {
-     title:{type:"string",optional:false,max:100},
-     description:{type:"string",optional:false,max:500}
+     title:{type:"string",optional:true,max:100},
+     description:{type:"string",optional:true,max:500}
    }
   const check = new validator();
   const validationResponse = check.validate(Blogs,schema);
@@ -20,9 +22,12 @@ exports.updateBlog = async(req,res)=>{
         errors:validationResponse
    })
  }
-  
-    let query = "UPDATE blog_tbl SET title=?,description=? WHERE ID=?";
-    dbConnection.query(query,[Blog.title,Blog.description,id],(err,results)=>{
+  let query1 = "select * from blog_tbl where blog_tbl.ID = ?"
+  dbConnection.query(query1,[id],(err,results)=>{
+    
+    if(results && results[0].userID === user.userId ){
+      let query2 = "UPDATE blog_tbl SET title=?,description=? WHERE ID=?";
+    dbConnection.query(query2,[Blog.title,Blog.description,id],(err,results)=>{
         if(!err){
             if(results.affectedRows === 0){
                 return res.status(404).json({message:"Blog does not exist"})
@@ -33,4 +38,10 @@ exports.updateBlog = async(req,res)=>{
           return res.status(500).json(err)
         }
       })
+    }
+    else{
+      return res.status(400).json(err)
+    }
+  })
+    
 }

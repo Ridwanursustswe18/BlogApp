@@ -3,8 +3,7 @@ const validator = require('fastest-validator');
 const dbConnection = require("../database/dbConnection");
 
 exports.createBlog = async (req,res)=>{
-    
-    
+    const user = req.user;
     const Blogs = {
         title:req.body.title,
         description:req.body.description
@@ -23,8 +22,9 @@ exports.createBlog = async (req,res)=>{
      })
    }
 
-     let query = "insert into blog_tbl(title,description) values (?,?)"
-     dbConnection.query(query,[Blogs.title,Blogs.description],(err,results)=>{
+
+     let query = "insert into blog_tbl(title,description,userID) values (?,?,?)"
+     dbConnection.query(query,[Blogs.title,Blogs.description,user.userId],(err,results)=>{
        if(!err){
          return res.status(200).json({message:"blog added succesfully"})
        }
