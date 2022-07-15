@@ -70,11 +70,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-<<<<<<< HEAD
 					"raw": "{\r\n    \"Name\": \"bappy\",\r\n    \"Email\":\"bappyl@gmail.com\",\r\n    \"UserName\":\"bappy123\",\r\n    \"Password\":\"pass345\"\r\n}",
-=======
-					"raw": "",
->>>>>>> fad920e1f86ca09bec137001418fe095f45e200f
 					"options": {
 						"raw": {
 							"language": "json"
@@ -103,11 +99,7 @@
 					"bearer": [
 						{
 							"key": "token",
-<<<<<<< HEAD
 							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhcHB5MTI0IiwidXNlcklkIjoxOCwiaWF0IjoxNjU3MTAzMzMyLCJleHAiOjE2NTc3MDgxMzJ9.k-i0WZ-W_VaH_2h4jYv8LMbxCgeFuhFrMYUYfx-oB9U",
-=======
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJpZHdhbnVyNDA0IiwidXNlcklkIjo5LCJpYXQiOjE2NTQ3MDI3NjUsImV4cCI6MTY1NTMwNzU2NX0.4VhR8XNZbLmPpNr1Y-eYHqlP10ws7idhfoSKnZMxL-I",
->>>>>>> fad920e1f86ca09bec137001418fe095f45e200f
 							"type": "string"
 						}
 					]
@@ -116,11 +108,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-<<<<<<< HEAD
 					"raw": "{\r\n\"title\":\"CRUDad\"\r\n\r\n\r\n\r\n}",
-=======
-					"raw": "{\r\n\"title\":\"CRUD=\",\r\n\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non commodo turpis. Interdum et malesuada fames ac ante ipsum primis in faucibu.\"\r\n\r\n}",
->>>>>>> fad920e1f86ca09bec137001418fe095f45e200f
 					"options": {
 						"raw": {
 							"language": "json"
@@ -128,11 +116,7 @@
 					}
 				},
 				"url": {
-<<<<<<< HEAD
 					"raw": "http://localhost:3000/update/11",
-=======
-					"raw": "http://localhost:3000/update/7",
->>>>>>> fad920e1f86ca09bec137001418fe095f45e200f
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -140,11 +124,7 @@
 					"port": "3000",
 					"path": [
 						"update",
-<<<<<<< HEAD
 						"11"
-=======
-						"7"
->>>>>>> fad920e1f86ca09bec137001418fe095f45e200f
 					]
 				}
 			},
@@ -207,7 +187,6 @@
 				}
 			},
 			"response": []
-<<<<<<< HEAD
 		},
 		{
 			"name": "SIngle Blog",
@@ -236,8 +215,6 @@
 				}
 			},
 			"response": []
-=======
->>>>>>> fad920e1f86ca09bec137001418fe095f45e200f
 		}
 	]
 }
